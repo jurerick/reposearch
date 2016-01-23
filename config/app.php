@@ -156,8 +156,9 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
-        // 
+        // Vendors Service Providers
         Kozz\Laravel\Providers\Guzzle::class,
+        Khill\Lavacharts\Laravel\LavachartsServiceProvider::class,
 
     ],
 

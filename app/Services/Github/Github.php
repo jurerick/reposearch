@@ -31,9 +31,28 @@ class Github{
 	*/
 	public function get($user, $repo)
 	{
-		$url = 'https://'.$this->api.'/repos/' . $user . '/' . $repo . '?client_id=' . $this->clientId . '&client_secret=' . $this->secret;
+		$this->url = 'https://'.$this->api.'/repos/' . $user . '/' . $repo;
 
-		return json_decode( Guzzle::get($url)->getBody() );
+		return $this;
+	}
+
+	public function commits($sha = null)
+	{
+		$this->url .= '/commits';
+
+		if($sha)
+		{
+			$this->url .= '/' . $sha;
+		}
+
+		return $this;
+	}
+
+	public function statistics()
+	{
+		$this->url .= '/stats/contributors';
+
+		return $this;
 	}
 
 	/**
@@ -58,9 +77,14 @@ class Github{
 	* Return the decoded response of the api request.
 	* @return json
 	*/
-	public function dispatch()
+	public function dispatch($per_page = 30, $since = null)
 	{
-		$this->url .= '?client_id=' . $this->clientId . '&client_secret=' . $this->secret;
+		$this->url .= '?client_id=' . $this->clientId . '&client_secret=' . $this->secret . '&per_page=' . $per_page;
+
+		if($since)
+		{
+			$this->url .= '&since=' . $since;
+		}
 
 		return json_decode( Guzzle::get($this->url)->getBody() );
 	}

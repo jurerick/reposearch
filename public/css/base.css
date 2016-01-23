@@ -3259,6 +3259,10 @@ h1 {
         #content .profile-card .profile-info .inline-list i.fi-social-github {
           font-size: 1.5rem;
           color: #333; }
+          #content .profile-card .profile-info .inline-list i.fi-social-github:hover {
+            -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+            transition: all .5s ease-in-out; }
   #content .comments-block {
     margin: 1em 0; }
     #content .comments-block .media-object-section img {
@@ -3268,6 +3272,8 @@ h1 {
     #content .issue-basic-info ul li {
       display: inline-block;
       margin-right: 1em; }
+  #content #repo-info-block .repo-main-info h4 > small {
+    font-size: .6em; }
   #content #issues-block table tr td .avatar, #content #issues-block table tr th .avatar {
     width: 40px;
     border-radius: 54px; }

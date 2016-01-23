@@ -468,3 +468,10 @@ negSuf:"",posPre:"\u00a4",posSuf:""}]},id:"en-us",pluralCat:function(a,c){var e=
   issues.controller('IssuesController', ['$scope', '$http', function($scope, $http) {}]);
 
 }).call(this);
+
+(function() {
+  var repository;
+
+  repository = angular.module('repository', []);
+
+}).call(this);

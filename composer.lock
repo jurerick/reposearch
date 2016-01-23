@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3638dfc0bb5d019a705e7206116e8a74",
-    "content-hash": "b361fd6b168b2cd6749b00f7b46b614c",
+    "hash": "27537b7c0229745a3625539317634950",
+    "content-hash": "59ad1b6581666ec9e570a031e3192cdc",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -476,6 +476,58 @@
                 "tokenizer"
             ],
             "time": "2015-12-05 17:17:57"
+        },
+        {
+            "name": "khill/lavacharts",
+            "version": "2.5.10",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kevinkhill/lavacharts.git",
+                "reference": "b8e57d8d404a5ac398683a0d34bdfcdc46b2feeb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kevinkhill/lavacharts/zipball/b8e57d8d404a5ac398683a0d34bdfcdc46b2feeb",
+                "reference": "b8e57d8d404a5ac398683a0d34bdfcdc46b2feeb",
+                "shasum": ""
+            },
+            "require": {
+                "nesbot/carbon": "~1.14",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "~0.9",
+                "mybuilder/phpunit-accelerator": "~1.1",
+                "phpunit/phpunit": "~4.5",
+                "sami/sami": "~2.0",
+                "satooshi/php-coveralls": "~0.6",
+                "squizlabs/php_codesniffer": "~2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Khill\\Lavacharts\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kevin Hill",
+                    "email": "kevinkhill@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "PHP wrapper library for the Google Chart API",
+            "homepage": "http://lavacharts.com",
+            "keywords": [
+                "charts",
+                "google",
+                "graphs"
+            ],
+            "time": "2016-01-22 13:40:54"
         },
         {
             "name": "kozz/laravel-guzzle-provider",

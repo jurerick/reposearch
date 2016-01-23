@@ -5,9 +5,17 @@
 @section('content')
 <div>
 	<div class="row columns">
-		<a href="{{ route('web.finder') }}"><i class="fi-home"></i> Home</a>
+		
+		<nav aria-label="You are here:" role="navigation">
+		  <ul class="breadcrumbs">
+		    <li><a href="{{ route('web.finder') }}"><i class="fi-home"></i> Home</a></li>
+		    <li><a href="{{ route('web.repository', ['user'=> $repository->owner->login, 'repo'=> $repository->name]) }}">{{ $repository->name }}</li>
+		    <li><span class="show-for-sr">Current: </span>Issues</li>
+		  </ul>
+		</nav>
+
 		<h5>
-			<a href="{{ $repository->owner->html_url }}" target="_blank">
+			<a href="{{ route('web.repository', ['user'=>$repository->owner->login, 'repo'=>$repository->name]) }}">
 				{{ $repository->owner->login }}
 			</a> / <strong>{{ $repository->name }}</strong>
 		</h5>

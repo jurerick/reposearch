@@ -99,8 +99,8 @@ h1{font-size: 28px;}
 	        font-size: 1.5rem;
 	        color: #333;
 	        &:hover {
-	          // transform: scale(1.5);
-	          // transition: all .5s ease-in-out;
+	          transform: scale(1.5);
+	          transition: all .5s ease-in-out;
 	        }
 	      }
 	    }
@@ -126,8 +126,12 @@ h1{font-size: 28px;}
 		}
 	}
 
-	#show-issue-block{
-
+	#repo-info-block{
+		.repo-main-info{
+			h4{
+				> small{ font-size:.6em}
+			}
+		}
 	}
 
 	#issues-block{

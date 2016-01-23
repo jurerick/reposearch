@@ -41,11 +41,15 @@
 			        <div class="profile-card">
 			          	<!--img here-->
 			          	<div class="profile-info">
-				            <h4 class="subheader">@{{ repo.full_name }}</h4>
+				            <h4 class="subheader">
+				            	<a href="/repository/user/@{{ repo.owner.login }}/repo/@{{ repo.name }}">@{{ repo.full_name }}</a>
+				            </h4>
 				            <p>@{{ repo.description }}</p>
 				            <ul class="inline-list">
 				              <li>
-				              	<a target="_blank" href="@{{ repo.html_url }}"><i class="fi-social-github"></i></a>
+				              	<a href="/repository/user/@{{ repo.owner.login }}/repo/@{{ repo.name }}">
+				              		<i class="fi-social-github"></i>
+				              	</a>
 				              </li>
 			             	</ul>
 			             	<div class="other-info text-center">
