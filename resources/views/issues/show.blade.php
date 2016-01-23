@@ -5,16 +5,22 @@
 
 @section('content')
 <div class="row columns">
-	<a href="{{ route('web.finder') }}"><i class="fi-home"></i> Home</a>
-	
+
+	<nav aria-label="You are here:" role="navigation">
+	  <ul class="breadcrumbs">
+	    <li><a href="{{ route('web.finder') }}"><i class="fi-home"></i> Home</a></li>
+	    <li><a href="{{ route('web.repository', ['user'=> $repository->owner->login, 'repo'=> $repository->name]) }}">{{ $repository->name }}</li>
+	    <li><a href="{{ route('web.issues', ['user'=> $repository->owner->login, 'repo'=> $repository->name]) }}">Issues</a></li>
+	    <li><span class="show-for-sr">Current: </span> Discussion</li>
+	  </ul>
+	</nav>
+
 	<div class="issue-basic-info">
 		<h5>
-			<a href="{{ $repository->owner->html_url }}" target="_blank">
+			<a href="{{ route('web.repository', ['user'=>$repository->owner->login, 'repo'=>$repository->name]) }}">
 				{{ $repository->owner->login }}
 			</a> / 
-			<a href="{{ route('web.issues', ['user'=> $repository->owner->login, 'repo'=> $repository->name]) }}">
-				<strong>{{ $repository->name }}</strong>
-			</a>
+			<strong>{{ $repository->name }}</strong>			
 		</h5>
 		<h1>{{ $issue->title }} <span class="subheader">#{{ $issue->number }}</span></h1>
 		<ul>

@@ -51,6 +51,7 @@ elixir(function(mix) {
 
 	    mix.coffee('finder.coffee', 'resources/assets/js', null);
 	    mix.coffee('issues.coffee', 'resources/assets/js', null);
+	    mix.coffee('repository.coffee', 'resources/assets/js', null);
 	    mix.coffee('helpers.coffee', 'resources/assets/js', null);
 	    mix.coffee('config.coffee', 'resources/assets/js', null);
 
@@ -81,6 +82,7 @@ elixir(function(mix) {
 			'helpers.js',
 			'config.js',
 			'finder.js',
-			'issues.js'
+			'issues.js',
+			'repository.js'
 		], 'public/js/base.js');
 });

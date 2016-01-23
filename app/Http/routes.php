@@ -28,6 +28,7 @@
 
 Route::group(['middleware' => ['web']], function () {
     Route::get('/', ['as' => 'web.finder', 'uses'=> 'Finder\RepositoryController@index']);
+    Route::get('repository/user/{user}/repo/{repo}', ['as'=> 'web.repository', 'uses'=> 'Finder\RepositoryController@showRepository']);
     Route::get('issues/user/{user}/repo/{repo}', ['as'=> 'web.issues', 'uses'=> 'Finder\RepositoryController@issues']);
     Route::get('issues/user/{user}/repo/{repo}/no/{no}', ['as'=> 'web.issues.show', 'uses'=> 'Finder\RepositoryController@showIssue']);
 });

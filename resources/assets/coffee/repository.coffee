@@ -1,0 +1,2 @@
+repository = angular.module 'repository', []
+
